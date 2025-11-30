@@ -15,17 +15,17 @@ This project is part of the Sentinel safety framework. It represents **Layer 2**
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
-│                       SENTINEL — THREE LAYERS                                │
+│                       SENTINEL — THREE LAYERS                               │
 ├─────────────────────────────────────────────────────────────────────────────┤
 │                                                                             │
 │  Layer 1: INFERENCE       "Guardrails on existing models"                   │
-│  └── sentinel             ✅ Available now                                  │
+│  └── sentinel              Available now                                    │
 │                                                                             │
 │  Layer 2: TRAINING        "Safety embedded during fine-tuning"              │
-│  └── sentinel-integrate   🔨 In Development ← You are here                  │
+│  └── sentinel-integrate    In Development ← You are here                    │
 │                                                                             │
 │  Layer 3: FOUNDATION      "Values from pre-training"                        │
-│  └── sentinel-essence     🎯 Future                                         │
+│  └── sentinel-essence      Future                                           │
 │                                                                             │
 └─────────────────────────────────────────────────────────────────────────────┘
 ```
@@ -272,8 +272,8 @@ python evaluation/compare_models.py \
 | Project | Layer | Status |
 |---------|-------|--------|
 | [Sentinel](https://github.com/sentinel-seed/sentinel) | Inference | ✅ Available |
-| [Sentinel-Integrate](https://github.com/sentinel-seed/Sentinel-Integrate) | Training | 🔨 In Development |
-| [Sentinel-Essence](https://github.com/sentinel-seed/sentinel-essence) | Foundation | 🎯 Future |
+| [Sentinel-Integrate](https://github.com/sentinel-seed/Sentinel-Integrate) | Training | In Development |
+| [Sentinel-Essence](https://github.com/sentinel-seed/sentinel-essence) | Foundation | Future |
 | [Sentinel Platform](https://sentinelseed.dev) | — | ✅ Live |
 
 ## Credits
@@ -302,5 +302,6 @@ MIT License — Use freely, improve openly.
   <br>
   <a href="https://sentinelseed.dev">Website</a> •
   <a href="https://github.com/sentinel-seed/sentinel">Phase 1</a> •
-  <a href="https://twitter.com/sentinelseed">Twitter</a>
+  <a href="https://twitter.com/sentinel_Seed">Twitter</a>
 </p>
+
