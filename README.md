@@ -307,6 +307,6 @@ MIT License — Use freely, improve openly.
   <br>
   <a href="https://sentinelseed.dev">Website</a> •
   <a href="https://github.com/sentinel-seed/sentinel">Phase 1</a> •
-  <a href="https://twitter.com/sentinel_Seed">Twitter</a>
+  <a href="https://x.com/Sentinel_Seed">Twitter</a>
 </p>
 
