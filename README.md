@@ -55,9 +55,10 @@ Unlike approaches that start with pre-training or theory, we validate at each la
 
 ### Phase 1: VALIDATE (Prompt Layer) ✅
 Tested alignment principles at the prompt layer using the [Sentinel Seed](https://github.com/sentinel-seed/sentinel):
-- Measured effectiveness across multiple models
-- Identified which principles actually work
-- Established baseline metrics
+- **97.6% average safety** across 6 models, 4 benchmarks
+- Validated THSP Protocol (Truth, Harm, Scope, Purpose)
+- Discovered PURPOSE gate as critical for agent/robot safety
+- Established baseline metrics for fine-tuning
 
 ### Phase 2: INTEGRATE (Fine-tuning) ← Current
 Take validated principles and embed them into model weights:
@@ -72,29 +73,33 @@ Eventually influence model behavior from the start:
 - Training methodology for aligned foundation models
 - Collaboration with model providers
 
-## The THS Protocol
+## The THSP Protocol
 
-Our alignment framework is built on three gates that every response must pass:
+Our alignment framework is built on **four gates** that every response must pass:
 
 | Gate | Question | Purpose |
 |------|----------|---------|
 | **TRUTH** | "Is this factually correct?" | Prevent misinformation |
 | **HARM** | "Does this cause harm?" | Prevent dangerous outputs |
 | **SCOPE** | "Is this within appropriate limits?" | Prevent overreach |
+| **PURPOSE** | "Does this serve a legitimate benefit?" | Require teleological justification |
 
-All three gates must pass for an action to proceed. This creates a simple, auditable framework that can be embedded into model behavior.
+All four gates must pass for an action to proceed. The key insight of THSP is that **the absence of harm is not sufficient** — there must be genuine purpose that benefits those being served.
+
+This creates a simple, auditable framework that can be embedded into model behavior. Validated at inference layer with **97.6% average safety** across 6 models and 4 benchmarks.
 
 ## Project Structure
 
 ```
 sentinel-integrate/
 ├── datasets/                       # Training data
-│   ├── ths-alignment/             # THS Protocol examples
-│   │   ├── truth_gate.jsonl       # Factual accuracy (25 examples)
-│   │   ├── harm_gate.jsonl        # Safety boundaries (25 examples)
-│   │   └── scope_gate.jsonl       # Appropriate limits (25 examples)
-│   ├── refusals/                  # Correct refusal patterns (25 examples)
-│   ├── utility/                   # Helpful responses (20 examples)
+│   ├── thsp-alignment/            # THSP Protocol examples
+│   │   ├── truth_gate.jsonl       # Factual accuracy
+│   │   ├── harm_gate.jsonl        # Safety boundaries
+│   │   ├── scope_gate.jsonl       # Appropriate limits
+│   │   └── purpose_gate.jsonl     # Teleological justification
+│   ├── refusals/                  # Correct refusal patterns
+│   ├── utility/                   # Helpful responses
 │   └── prepared/                  # Processed training data
 │
 ├── training/
